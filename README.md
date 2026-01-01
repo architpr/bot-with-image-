@@ -13,17 +13,17 @@ The system uses a **Multi-Vector Retrieval** strategy with **Just-In-Time (JIT) 
 
 ```mermaid
 graph TD
-    A[User Uploads PDF] --> B(Ingest: PyMuPDF);
-    B -->|Fast Mode| C{Extract Content};
-    C -->|Text| D[Split Chunks];
-    C -->|Images| E[Save to /assets];
-    D -->|Link Image Paths| F[Vector Store (ChromaDB)];
+    A["User Uploads PDF"] --> B["Ingest: PyMuPDF"];
+    B -->|"Fast Mode"| C{"Extract Content"};
+    C -->|"Text"| D["Split Chunks"];
+    C -->|"Images"| E["Save to /assets"];
+    D -->|"Link Image Paths"| F["Vector Store (ChromaDB)"];
     
-    G[User Query: 'Describe Figure 3'] --> H(Retriever);
-    H -->|Finds Text| I[Get Document];
-    I -->|Read Metadata| J[Load Linked Image];
-    J -->|Inject Image + Text| K[Gemini 1.5 Flash];
-    K --> L[Final Visual Answer];
+    G["User Query: 'Describe Figure 3'"] --> H("Retriever");
+    H -->|"Finds Text"| I["Get Document"];
+    I -->|"Read Metadata"| J["Load Linked Image"];
+    J -->|"Inject Image + Text"| K["Gemini 1.5 Flash"];
+    K --> L["Final Visual Answer"];
 ```
 
 ## ✨ Features
