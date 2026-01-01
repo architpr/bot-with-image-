@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-groq
+langchain-google-genai
+google-generativeai
+langchain-huggingface
+sentence-transformers
+unstructured[all-docs]
+chromadb
+streamlit
+python-dotenv
+pillow
+pypdf
+pdf2image
+pymupdf
+langchain-chroma
