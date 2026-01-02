@@ -91,4 +91,4 @@ graph TD
 -   **UI**: Streamlit
 
 ---
-*Built with ❤️ for Advanced RAG Research.*
+
