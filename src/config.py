@@ -6,8 +6,11 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+if not GROQ_API_KEY:
+    raise ValueError("GROQ_API_KEY is not set in environment variables")
 if not GOOGLE_API_KEY:
-    raise ValueError("GOOGLE_API_KEY is not set in environment variables. Please add it to your .env or Cloud Secrets.")
+    # Not raising error strictly if we don't use it, but for this hybrid plan we need it.
+    pass
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
